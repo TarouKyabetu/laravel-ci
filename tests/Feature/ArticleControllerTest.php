@@ -36,7 +36,7 @@ class ArticleControllerTest extends TestCase
         $response = $this->actingAs($user)
             ->get(route('articles.create'));
 
-        $response->assertStatus(200)
+        $response->assertStatus(400) //200を400へ変更
             ->assertViewIs('articles.create');
     }
     //==========ここまで追加==========
